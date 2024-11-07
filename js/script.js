@@ -10,14 +10,12 @@ const btn = document.getElementById("lamp-btn");
 //  console.log(btn)
 
 // Funzione della lampadina + bonus
-btn.addEventListener(`click`, function() {
-whiteLamp.src = "./img/yellow_lamp.png"
-
-if (whiteLamp.classList.contains("off")) {
-    whiteLamp.classList.remove("off")
-    btn.innerText = "Spegni la lampadina"
-} else {
-    whiteLamp.classList.add("off")
-    btn.innerText = "Accendi la lampadina"
-}
+btn.addEventListener(`click`, function () {
+    if (whiteLamp.src.includes("white_lamp.png")) {
+        whiteLamp.src = "./img/yellow_lamp.png"
+        btn.innerText = "Spegni la lampadina"
+    } else if (!(whiteLamp.src.includes("white_lamp.png"))){
+        whiteLamp.src= "./img/white_lamp.png"
+        btn.innerText = "Accendi la lampadina"
+    }
 })
