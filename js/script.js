@@ -2,13 +2,16 @@
 // Al click del bottone, la lampadina dovrà accendersi (dovremo quindi utilizzare l’immagine della lampadina accesa, sempre in allegato)
 //Costante della lampada
 const whiteLamp = document.getElementById("white-lamp");
-console.log(whiteLamp)
+//  console.log(whiteLamp)
 
 //Costante del bottone
 const btn = document.getElementById("lamp-btn");
-console.log(btn)
+//  console.log(btn)
 
-
+// Funzione della lampadina
+btn.addEventListener(`click`, function() {
+whiteLamp.src = "./img/yellow_lamp.png"
+})
 
 
 // **BONUS**
