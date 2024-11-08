@@ -2,20 +2,20 @@
 // Al click del bottone, la lampadina dovrà accendersi.
 
 //Costante della lampada
-const whiteLamp = document.getElementById("white-lamp");
-//  console.log(whiteLamp)
+const imgElem = document.getElementById("white-lamp");
+//  console.log(imgElem)
 
 //Costante del bottone
-const btn = document.getElementById("lamp-btn");
+const btnElem = document.getElementById("lamp-btn");
 //  console.log(btn)
 
 // Funzione della lampadina + bonus
-btn.addEventListener(`click`, function () {
-    if (whiteLamp.src.includes("white_lamp.png")) {
-        whiteLamp.src = "./img/yellow_lamp.png"
-        btn.innerText = "Spegni la lampadina"
-    } else if (!(whiteLamp.src.includes("white_lamp.png"))){
-        whiteLamp.src= "./img/white_lamp.png"
-        btn.innerText = "Accendi la lampadina"
+btnElem.addEventListener(`click`, function () {
+    if(imgElem.src.includes("white_lamp")) {
+        imgElem.src = "./img/yellow_lamp.png";
+         btnElem.innerHTML = "Spegni la lampadina"
+    } else {
+        imgElem.src = "./img/white_lamp.png";
+        btnElem.innerHTML = "Accendi la lampadina"
     }
 })
